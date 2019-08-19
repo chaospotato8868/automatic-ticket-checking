@@ -1,3 +1,5 @@
+#!/Users/dingchao8868/anaconda3/bin/python3
+
 import os
 import time
 from datetime import date
@@ -10,9 +12,10 @@ from bs4 import BeautifulSoup
 
 import smtplib
 
-dt = date(2019,8,24).strftime('%d/%m/%Y')
+dt = date(2019,10,8).strftime('%d/%m/%Y')
 
-driver = webdriver.Chrome(os.path.join(os.getcwd(), 'chromedriver') )
+# driver = webdriver.Chrome(os.path.join(os.getcwd(), 'chromedriver') )
+driver = webdriver.Chrome('/Users/dingchao8868/Documents/GitHub/automatic-ticket-checking/chromedriver')
 
 driver.get("https://venta.renfe.com")
 time.sleep(2)
@@ -30,8 +33,9 @@ driver.find_element_by_xpath("//button[@title='BUY']").click()
 time.sleep(5)
 page_html = driver.page_source
 page_soup = BeautifulSoup(page_html, "html.parser")
-
 info = page_soup.find(name='p',attrs={'id':'tab-mensaje_contenido'}).string
+driver.close()
+
 
 
 if info == None:
