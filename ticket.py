@@ -40,8 +40,8 @@ driver.close()
 
 if info == None:
 
-	EMAIL_ADDRESS = 'test.chao8868@gmail.com'
-	EMAIL_PASSWORD = '19910824dc'
+	EMAIL_ADDRESS = 'xxx@gmail.com'
+	EMAIL_PASSWORD = 'xxx'
 
 	with smtplib.SMTP('smtp.gmail.com', 587) as smtp:
 	    smtp.ehlo()
