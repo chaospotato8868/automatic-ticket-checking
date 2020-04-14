@@ -55,4 +55,4 @@ if info == None:
 	    
 	    msg = f'Subject:{subject}\n\n{body}'
 	    
-	    smtp.sendmail(EMAIL_ADDRESS, 'dingchaoruc8868@gmail.com', msg)
+	    smtp.sendmail(EMAIL_ADDRESS, 'to_email@gmail.com', msg)
